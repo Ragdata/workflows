@@ -8,7 +8,7 @@ on:
                 type: string
                 required: false
                 default: master
-            filter-regex-exclude:
+            regex-exclude:
                 description: REGEX for files to exclude from linting
                 type: string
                 required: false
@@ -41,18 +41,18 @@ concurrency:
 jobs:
     lint:
         name: Linter
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v3.3.0
+              uses: actions/checkout@v3
 
             - name: Fetch default style files
               env:
                   css: ${{ inputs.validate-css }}
                   GITHUB_TOKEN: ${{ github.token }}
               run: |
-                mkdir --parents .github/linters
+                mkdir -p .github/linters
                 fnames=('.markdown-lint.yml' '.yaml-lint.yml')
                 if [[ $css == 'true' ]]; then
                     fnames+=('.stylelintrc.json')
@@ -90,7 +90,7 @@ jobs:
                   GITHUB_TOKEN: ${{ github.token }}
                   DEFAULT_BRANCH: ${{ inputs.default-branch }}
                   VALIDATE_ALL_CODEBASE: ${{ github.event_name != 'pull_request' }}
-                  FILTER_REGEX_EXCLUDE: ${{ inputs.filter-regex-exclude }}
+                  FILTER_REGEX_EXCLUDE: ${{ inputs.regex-exclude }}
 
                   # ALWAYS RUN THESE
                   VALIDATE_BASH: true
