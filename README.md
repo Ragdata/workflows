@@ -28,6 +28,12 @@ v0.1.0
 
 [`^ Top`](#-project-overview)
 
+## 📛 Badges
+
+[//]: # (https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg)
+
+[`^ Top`](#-project-overview)
+
 ## 🔐 Security
 
 [`^ Top`](#-project-overview)
