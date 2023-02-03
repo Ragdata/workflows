@@ -1,0 +1,27 @@
+# See: https://citation-file-format.github.io/
+
+cff-version: 1.2.0
+
+title: Ragdata's Reusable Workflows
+
+message: >-
+  If you use this software, please cite using the
+  information provided here
+
+type: software
+
+authors:
+  - given-names: Darren (Ragdata)
+    family-names: Poulton
+    email: ragdata@users.noreply.github.com
+    orcid: 'https://orcid.org/0000-0001-8986-2886'
+    affiliation: Redeyed Software
+
+repository-code: 'https://github.com/ragdata/workflows'
+
+url: 'https://ragdata.github.io/workflows'
+
+abstract: >-
+  A collection of reusable GitHub workflows and actions
+
+license: MIT
